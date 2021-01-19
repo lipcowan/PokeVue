@@ -1,9 +1,13 @@
 <template>
-  <div id="nav">
-    <router-link :to="{ name: 'PokeStore' }">PokeStore</router-link> |
-    <router-link :to="{ name: 'About' }">About</router-link>
+  <div id="app">
+    <div id="nav">
+      <router-link :to="{ name: 'PokeStore' }">
+        <img alt="PokeVue logo" src="@/assets/logo.png" />
+      </router-link>
+    </div>
+    <h1>PokeVue</h1>
+    <router-view />
   </div>
-  <router-view />
 </template>
 
 <style>
@@ -14,20 +18,6 @@
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-
 h4 {
   font-size: 20px;
 }

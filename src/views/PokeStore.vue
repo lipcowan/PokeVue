@@ -1,8 +1,6 @@
 <template>
-  <h1>Welcome to PokeVue!</h1>
-  <img alt="PokeVue logo" src="@/assets/logo.png" />
   <div class="poke-store">
-    <PokeCard v-for="pokemon in pokemon" :key="pokemon.id" :pokemon="pokemon" />
+    <PokeCard v-for="poke in pokemon" :key="poke.id" :poke="poke" />
   </div>
 </template>
 
@@ -21,7 +19,7 @@ export default {
     }
   },
   created() {
-    PokeService.getPokemon()
+    PokeService.getAll()
       .then(res => {
         this.pokemon = res.data
       })
@@ -38,19 +36,5 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: 18px;
-}
-.poke-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  cursor: pointer;
-  border: 1px solid #39495c;
-  margin-bottom: 18px;
-}
-
-.poke-card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
 }
 </style>
