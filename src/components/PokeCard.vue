@@ -1,6 +1,8 @@
 <template>
   <div class="poke-card">
-    <img :src="poke.photo" :alt="poke.species" />
+    <router-link :to="`/${poke.id}`">
+      <img :src="poke.photo" :alt="poke.species" />
+    </router-link>
     <span>{{ poke.dex }}</span>
     <h3>{{ poke.species }}</h3>
   </div>

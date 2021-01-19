@@ -12,6 +12,7 @@
 <script>
 import PokeService from '@/services/PokeService.js'
 export default {
+  name: 'Details',
   props: ['id'],
   data() {
     return {

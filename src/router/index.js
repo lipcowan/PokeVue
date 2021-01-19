@@ -10,6 +10,7 @@ const routes = [
   },
   {
     path: '/:id',
+    name: 'Details',
     props: true,
     component: Poke
   }
@@ -21,4 +22,3 @@ const router = createRouter({
 })
 
 export default router
- 
