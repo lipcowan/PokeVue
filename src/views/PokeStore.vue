@@ -2,7 +2,7 @@
   <h1>Welcome to PokeVue!</h1>
   <img alt="PokeVue logo" src="@/assets/logo.png" />
   <div>
-    <PokeCard />
+    <PokeCard v-for="pokemon in pokemon" :key="pokemon.id" :pokemon="pokemon" />
   </div>
 </template>
 
@@ -13,29 +13,28 @@ import axios from 'axios'
 export default {
   name: 'PokeStore',
   components: {
-    PokeCard
+    PokeCard,
   },
   data() {
     return {
-      pokemon: null
+      pokemon: null,
     }
   },
   created() {
     axios
-      .get('http://localhost:8000/api')
+      .get('http://localhost:8000/api/')
       .then(res => {
-        console.log('pokemon:', res.data)
-        // this.pokemon = res.data
+        this.pokemon = res.data
       })
-      .catch(e => {
+      .catch((e) => {
         console.log(e)
       })
-  }
+  },
 }
 </script>
 
 <style scoped>
-.pokeCard {
+.poke-card {
   display: flex;
   flex-direction: column;
   align-items: center;

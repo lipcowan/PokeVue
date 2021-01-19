@@ -1,12 +1,14 @@
 <template>
-  <div class="pokeCard"></div>
+  <div class="poke-card">
+    <h4>{{ pokemon.species }}</h4>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'PokeCard',
   props: {
-    msg: String
+    pokemon: Object
   }
 }
 </script>

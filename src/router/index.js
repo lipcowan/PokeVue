@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import PokeStore from '@/views/PokeStore.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'PokeStore',
+    component: PokeStore
   },
   {
     path: '/about',
