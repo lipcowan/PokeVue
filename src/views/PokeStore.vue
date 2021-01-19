@@ -1,18 +1,19 @@
 <template>
   <h1>Welcome to PokeVue!</h1>
+  <img alt="PokeVue logo" src="@/assets/logo.png" />
   <div>
-    <PokemonCard></PokemonCard>
+    <PokeCard />
   </div>
 </template>
 
 <script>
-import PokemonCard from '@/components/PokemonCard.vue'
-import PokeService from '@/services/PokeService.js'
+import PokeCard from '@/components/PokeCard.vue'
+import axios from 'axios'
 
 export default {
   name: 'PokeStore',
   components: {
-    PokemonCard
+    PokeCard
   },
   data() {
     return {
@@ -20,9 +21,11 @@ export default {
     }
   },
   created() {
-    PokeService.getAll()
+    axios
+      .get('http://localhost:8000/api')
       .then(res => {
-        this.pokemon = res.data
+        console.log('pokemon:', res.data)
+        // this.pokemon = res.data
       })
       .catch(e => {
         console.log(e)

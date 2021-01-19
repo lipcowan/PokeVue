@@ -9,11 +9,11 @@ _Create a web app that displays a list of products and their associated views. T
 ### 1 - Database​ to store product information and “likes” in a single table.
 - [x] A SQL RDBMS is preferred - SQL Server, MySQL, SQLite, etc.
 - [x] The schema should include a title, description, product image (e.g. URL), price, and number of likes.(species, about, photo, price, likes)
-- [ ] Populate the table with a minimum of 10 example items. Include a SQL script to create the database/table as well as populate it with the example items.
+- [x] Populate the table with a minimum of 10 example items. Include a SQL script to create the database/table as well as populate it with the example items.
 
 ### 2 - Backend API ​that supports CRUD interactions.
 - [x] The API should support GET requests for product list and single-page views.
-- [ ] It should also support PUT/POST/PATCH requests for adding likes.
+- [x] It should also support PUT/POST/PATCH requests for adding likes.
 - [ ] OPTIONAL: Likes can also be removed with another POST/PATCH or DELETE request.
 
 ### 3 - Client ​written in a modern frontend JavaScript framework
