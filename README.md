@@ -13,16 +13,16 @@ _Create a web app that displays a list of products and their associated views. T
 
 ### 2 - Backend API ​that supports CRUD interactions.
 - [x] The API should support GET requests for product list and single-page views.
-- [x] It should also support PUT/POST/PATCH requests for adding likes.
+- [ ] It should also support PUT/POST/PATCH requests for adding likes. *STILL WORKING ON LIKES*
 - [ ] OPTIONAL: Likes can also be removed with another POST/PATCH or DELETE request.
 
 ### 3 - Client ​written in a modern frontend JavaScript framework
 _Framework should ideally be Vue, but React and Angular are acceptable._ 
 #### Required views:
-- [ ] Main Page View:​ a scrollable page that lists all available products. Each item should display with the product image, item title, and price.
+- [x] Main Page View:​ a scrollable page that lists all available products. Each item should display with the product image, item title, and price.
 - [ ] OPTIONAL: Implement infinite scroll or pagination.
 
-- [ ] Single-page View:​ a page with complete details for a single product.
+- [x] Single-page View:​ a page with complete details for a single product.
 _Include product image, title, description, price and number of “likes”. A button should also be placed on the page to increment “likes” by one for each individual user._
 - [ ] OPTIONAL: Add a back button or breadcrumbs to return back to the main page view.
 - [ ] OPTIONAL: Add a button to remove a “like”, i.e. if a user likes a product, but decides to remove that like, allow them to press an “unlike” button. Or to press the same button again to “unlike”

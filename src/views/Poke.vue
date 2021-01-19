@@ -4,7 +4,7 @@
     <img :src="poke.photo" :alt="poke.species" />
     <h4>{{ poke.dex }}</h4>
     <p>{{ poke.about }}</p>
-    <p>{{ poke.likes }} likes</p>
+    <button>{{ poke.likes }} likes</button>
     <p>$ {{ poke.price }}</p>
   </div>
 </template>
@@ -29,6 +29,7 @@ export default {
       })
   }
 }
+
 </script>
 
 <style scoped>

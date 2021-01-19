@@ -16,7 +16,10 @@ export default {
   getPoke(id) {
     return pokeServer.get('/' + id)
   },
-  addLike(id) {
-    return pokeServer.patch('/' + id)
+  addLike(poke) {
+    const like = poke.likes + 1
+    return pokeServer.patch('/' + 'poke.id', {
+      likes: like
+    })
   }
 }
